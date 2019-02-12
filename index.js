@@ -1,10 +1,10 @@
 function dwarfRollCall(dwarves) {
   // created a new line for the dwarves 
-  var dwarfNum = [];
+  var dwarfHalf = [];
   // go through the go through the line of dwarves
-  for(var i = 0; i < dwarves.length; i++){
+  for(var i = dwarves.length/2; i < dwarves.length; i++){
     // give each dwarf a number and add them to the new line
-    dwarfNum.push(`${i+1}. ${dwarves[i]} `);
+    dwarfHalf.push(`${i+1}. ${dwarves[i]} `);
   }
   // alert the user of the new line of dwarves with their numbers
   return dwarfNum.join("");
@@ -46,4 +46,18 @@ function findTheCheese (foods) {
   }
   // if there are no cheeses than let the user know there aren't any 
   return "no cheese!";
+}
+
+
+function wordsWithB(words) {
+  //create a new array
+  var emptyArray = [];
+  //go through words array
+  for(var i = 0; i<words.length; i++){
+    //check if any words start with letter B
+    if(words[i].startsWith('b')){
+      emptyArray.push(words[i]);
+    }
+  }
+  return emptyArray;
 }
